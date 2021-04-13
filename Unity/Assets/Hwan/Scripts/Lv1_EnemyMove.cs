@@ -22,9 +22,13 @@ public class Lv1_EnemyMove : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject)
-        {
-            moveLeft = !moveLeft;
+        if (other.transform.tag == "Wall" )
+        {   
+                moveLeft = !moveLeft;
         }
     }
 }
+            
+
+           
+           
