@@ -1,0 +1,10 @@
+
+Unity/Library/
+Unity/Logs/
+Unity/Temp/
+Unity/UserSettings/
+Unity/obj/
+.vsconfig
+*.csproj
+*.sln
+
