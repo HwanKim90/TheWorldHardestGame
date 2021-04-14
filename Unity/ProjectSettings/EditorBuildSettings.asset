@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Hwan/Scenes/MapScene.unity
+    guid: 7ffaedb4ffe9ca04b8bc30ac608e3886
+  - enabled: 1
+    path: Assets/KJ/Scene/Player.unity
+    guid: 29aedca660fd0c24ba8bd52efa2af466
+  - enabled: 1
+    path: Assets/Scenes/MainScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}
