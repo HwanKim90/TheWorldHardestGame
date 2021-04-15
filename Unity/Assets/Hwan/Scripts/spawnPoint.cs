@@ -6,24 +6,25 @@ public class spawnPoint : MonoBehaviour
 {
 
     public GameObject spawnPoint1;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject spawnPoint2;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 
     void OnTriggerEnter(Collider col)
     {
+        if (col.transform.tag == "SaveZone")
+        {
+            print("sz 통과");
+            spawnPoint1 = spawnPoint2;
+        }
+        
         if (col.transform.tag == "Enemy")
         {
-            print("충돌!!");
-            this.transform.position = spawnPoint1.transform.position;
+            transform.position = spawnPoint1.transform.position;
         }
+       
+
+
+        
     }
 }
