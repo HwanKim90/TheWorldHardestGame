@@ -4,14 +4,27 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-   
-    
-        private void OnTriggerEnter(Collider other)
-    {
-   
+    public static int count;
 
-        //자기자신 오브젝트만 파괴
-        Destroy(gameObject);
+  
+    // Start is called before the first frame update
+    void Start()
+    {
+
     }
-   
+
+    // Update is called once per frame
+
+
+    void OnTriggerEnter(Collider col)
+    {
+        count++;
+        print("코인 " + count);
+        gameObject.SetActive(false);
+    }
 }
+
+
+
+
+

@@ -2,13 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KJ_spawnPoint : MonoBehaviour
+public class Coinspawn : MonoBehaviour
 {
-    public GameObject Coin1;
     public GameObject Player;
     public GameObject spawnPoint1;
-    
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,16 +20,19 @@ public class KJ_spawnPoint : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.transform.tag == "Enemy")
+        if (Player.transform.position == spawnPoint1.transform.position)
         {
-            transform.position = spawnPoint1.transform.position;
-            Coin1.SetActive(true);
-            Coin.count = 0;
-            print("ÄÚÀÎ0°³");
-            
+
+
+            gameObject.SetActive(true);
+
 
         }
+        else
+        {
+            gameObject.SetActive(false);
+        }
     }
+
 }
-    
 
