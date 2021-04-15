@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spawnPoint : MonoBehaviour
+public class KJ_spawnPoint : MonoBehaviour
 {
 
     public GameObject spawnPoint1;
@@ -22,7 +22,6 @@ public class spawnPoint : MonoBehaviour
     {
         if (col.transform.tag == "Enemy")
         {
-            print("Ãæµ¹!!");
             this.transform.position = spawnPoint1.transform.position;
         }
     }
