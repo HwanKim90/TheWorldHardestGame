@@ -7,8 +7,9 @@ public class KJ_spawnPoint : MonoBehaviour
     public GameObject Coin1;
     public GameObject Player;
     public GameObject spawnPoint1;
-    
-    
+    public GameObject spawnPoint2;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,10 @@ public class KJ_spawnPoint : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
+        if (col.transform.tag == "SaveZone")
+        {
+            spawnPoint1 = spawnPoint2;
+        }
         if (col.transform.tag == "Enemy")
         {
             transform.position = spawnPoint1.transform.position;

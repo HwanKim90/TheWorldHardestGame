@@ -6462,9 +6462,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 575a483fa47ec4d43ad624654d3dd855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Coin1: {fileID: 91289154}
+  Player: {fileID: 1642139440}
   spawnPoint1: {fileID: 2117989918}
   spawnPoint2: {fileID: 1204028916}
-  coin: {fileID: 91289154}
 --- !u!65 &1642139443
 BoxCollider:
   m_ObjectHideFlags: 0
