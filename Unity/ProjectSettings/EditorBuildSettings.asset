@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Hwan/Scenes/MapScene.unity
+    path: Assets/Hwan/Scenes/MapScene old.unity
     guid: 7ffaedb4ffe9ca04b8bc30ac608e3886
   - enabled: 1
     path: Assets/KJ/Scene/Player.unity
