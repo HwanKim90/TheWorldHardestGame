@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KH_playerMove : MonoBehaviour
+public class KJ_playerMove : MonoBehaviour
 {
 
 
