@@ -8,7 +8,7 @@ public class KJ_spawnPoint : MonoBehaviour
     public GameObject Player;
     public GameObject spawnPoint1;
     public GameObject spawnPoint2;
-
+    public static bool isFinish;
 
     // Start is called before the first frame update
     void Start()
@@ -24,8 +24,11 @@ public class KJ_spawnPoint : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
+        
+
         if (col.transform.tag == "SaveZone")
         {
+            isFinish = true;
             spawnPoint1 = spawnPoint2;
         }
         if (col.transform.tag == "Enemy")

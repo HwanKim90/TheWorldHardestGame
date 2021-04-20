@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Lv1_EnemyMove : MonoBehaviour
 {
+   
     public float moveSpeed = 4f;
 
     public bool moveLeft;
 
+    public GameObject EnemySound;
     void Update()
     {
         if (moveLeft)
@@ -22,13 +24,25 @@ public class Lv1_EnemyMove : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.transform.tag == "Wall" )
-        {   
-                moveLeft = !moveLeft;
-        }
-    }
-}
-            
+        
 
+        if (other.transform.tag == "Wall")
+        {
+            moveLeft = !moveLeft;
+        }
+        if (other.gameObject.tag == "Player")
+        {
+            AudioSource audio = EnemySound.GetComponent<AudioSource>();
+            audio.Play();
            
-           
+        }
+        
+        
+    }
+    
+}
+
+
+
+
+
