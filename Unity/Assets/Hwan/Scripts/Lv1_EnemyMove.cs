@@ -27,6 +27,8 @@ public class Lv1_EnemyMove : MonoBehaviour
                 moveLeft = !moveLeft;
         }
     }
+    
+    
 }
             
 

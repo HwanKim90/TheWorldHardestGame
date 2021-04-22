@@ -10109,7 +10109,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flyPoint: {fileID: 1508679684}
   startPoint: {fileID: 743942407}
-  moveSpeed: 5
+  moveSpeed: 2.5
   flySpeed: 6.5
   rotSpeed: 6
   startZone: {fileID: 1434434609}
@@ -11099,7 +11099,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d839d7ee0a8829745aefbda91c976c7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 0.35
 --- !u!4 &1868282685
 Transform:
   m_ObjectHideFlags: 0

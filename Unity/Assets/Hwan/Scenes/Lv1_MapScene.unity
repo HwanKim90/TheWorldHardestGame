@@ -1619,7 +1619,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &388661325
 GameObject:
@@ -3333,8 +3333,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 837990351}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.83, y: -2.4535234, z: -1.3125103}
+  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 7.83, y: 1.3125107, z: -2.4535236}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1107178122}
@@ -3342,8 +3342,8 @@ Transform:
   - {fileID: 717595889}
   - {fileID: 1808187450}
   - {fileID: 2049314426}
-  m_Father: {fileID: 1827994908}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &853272309
 GameObject:
@@ -4004,7 +4004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flyPoint: {fileID: 1739979064}
   startPoint: {fileID: 387734433}
-  moveSpeed: 5
+  moveSpeed: 2.5
   flySpeed: 5
   rotSpeed: 4
   startZone: {fileID: 774062735}
@@ -4112,7 +4112,7 @@ Transform:
   - {fileID: 1726995170}
   - {fileID: 1723388986}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1 &988188975
 GameObject:
@@ -8032,7 +8032,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1748560112
 GameObject:
@@ -8477,9 +8477,8 @@ Transform:
   m_Children:
   - {fileID: 917673214}
   - {fileID: 2094988916}
-  - {fileID: 837990352}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1834318198
 GameObject:
