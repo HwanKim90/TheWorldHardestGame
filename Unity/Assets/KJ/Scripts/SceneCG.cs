@@ -6,12 +6,12 @@ public class SceneCG : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (KJ_Coin.count > 0 && KJ_spawnPoint.isFinish)
+        if (KJ_Coin.countCoin > 0 && KJ_spawnPoint.isFinish)
         {
 
             if (other.gameObject.tag == "Player")
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(2);
               
                 
             }

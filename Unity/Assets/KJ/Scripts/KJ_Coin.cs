@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class KJ_Coin : MonoBehaviour
 {
-    public static int count;
+    public static int countCoin;
     public GameObject CoinSound;
    
     // Start is called before the first frame update
@@ -21,8 +21,8 @@ public class KJ_Coin : MonoBehaviour
         AudioSource audio = CoinSound.GetComponent<AudioSource>();
         audio.Play();
 
-        count++;
-        print("코인 " + count);
+        countCoin++;
+        print("코인 " + countCoin);
         gameObject.SetActive(false);
 
 

@@ -5,25 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Hwan/Scenes/MapScene.unity
-    guid: 7ffaedb4ffe9ca04b8bc30ac608e3886
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: Assets/Scenes/MainScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/KJ/Scene/TitleScene.unity
+    guid: a30c55e332e250d408d762bd687b3660
   - enabled: 1
     path: Assets/KJ/Scene/KJ_Player_Change.unity
     guid: 4f4da5c6effbe3c4eb9052b018e07265
-  - enabled: 0
-    path: Assets/Scenes/WHG.unity
-    guid: dd2b00aba8e314d4a866145448cf0d26
   - enabled: 1
     path: Assets/KJ/Scene/nextLevel.unity
     guid: f20ccc22441686d4bb644e6f98d3eace
   - enabled: 1
-    path: Assets/KJ/Scene/test.unity
-    guid: f07bde2fba0c6324ab80d31488ec507e
+    path: Assets/KJ/Scene/EndingScene.unity
+    guid: 2d3f575dfde6e714aa05e82d0905a19a
   m_configObjects: {}

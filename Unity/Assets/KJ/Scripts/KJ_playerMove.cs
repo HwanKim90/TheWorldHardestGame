@@ -16,7 +16,8 @@ public class KJ_playerMove : MonoBehaviour
 
     void Start()
     {
-
+        
+        
     }
     void Update()
     {
@@ -46,6 +47,8 @@ public class KJ_playerMove : MonoBehaviour
 
 
     }
-}
+  
+    }
+
  
 

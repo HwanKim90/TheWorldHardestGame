@@ -35,7 +35,7 @@ public class KJ_spawnPoint : MonoBehaviour
         {
             transform.position = spawnPoint1.transform.position;
             Coin1.SetActive(true);
-            KJ_Coin.count = 0;
+            KJ_Coin.countCoin = 0;
             print("ÄÚÀÎ0°³");
             
 
