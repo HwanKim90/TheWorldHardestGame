@@ -10,6 +10,8 @@ public class Player_State : MonoBehaviour
         Fly,
         Respawn
     }
+    
+    
 
     public Transform flyPoint;
     public Transform startPoint;
@@ -50,8 +52,11 @@ public class Player_State : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         
-        if (other.transform.tag == "Enemy") 
+        if (other.transform.tag == "Enemy")
+        {
             state = PlayerState.Fly;
+        
+        }
     }
 
     void MoveInput()

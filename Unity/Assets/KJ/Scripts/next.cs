@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class next : MonoBehaviour
 {
@@ -17,8 +18,8 @@ public class next : MonoBehaviour
     }
     IEnumerator NextScene()
     {
-        yield return new WaitForSeconds(3);
-        Application.LoadLevel("EndingScene");
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(3);
         
     }
 }

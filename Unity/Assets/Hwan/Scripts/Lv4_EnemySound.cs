@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class NextScene : MonoBehaviour
+public class Lv4_EnemySound : MonoBehaviour
 {
+    public AudioSource audio1;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.tag == "Player")
         {
-            SceneManager.LoadScene(2);
+            audio1.GetComponent<AudioSource>().Play();
+            
+
         }
     }
 }

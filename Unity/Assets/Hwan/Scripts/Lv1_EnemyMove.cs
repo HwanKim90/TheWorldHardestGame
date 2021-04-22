@@ -7,6 +7,7 @@ public class Lv1_EnemyMove : MonoBehaviour
     public float moveSpeed = 4f;
 
     public bool moveLeft;
+    
 
     void Update()
     {
@@ -25,7 +26,10 @@ public class Lv1_EnemyMove : MonoBehaviour
         if (other.transform.tag == "Wall" )
         {   
                 moveLeft = !moveLeft;
+
         }
+
+        
     }
     
     
