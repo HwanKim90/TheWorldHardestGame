@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_State : MonoBehaviour
 {
@@ -10,8 +11,9 @@ public class Player_State : MonoBehaviour
         Fly,
         Respawn
     }
-    
-    
+
+    public static int deathCount = 0;
+    public Text deathUI;
 
     public Transform flyPoint;
     public Transform startPoint;
@@ -29,6 +31,7 @@ public class Player_State : MonoBehaviour
         state = PlayerState.Move;
         tempPoint = flyPoint;
         originMat = startZone.GetComponent<Renderer>().material;
+        
     }
 
     // Update is called once per frame
@@ -55,7 +58,9 @@ public class Player_State : MonoBehaviour
         if (other.transform.tag == "Enemy")
         {
             state = PlayerState.Fly;
-        
+            deathCount++;
+            PlayerPrefs.SetInt("deathCount", deathCount);
+            deathUI.text = "Death : " + PlayerPrefs.GetInt("deathCount");
         }
     }
 
