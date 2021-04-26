@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/KJ/Scene/EndingScene.unity
     guid: 2d3f575dfde6e714aa05e82d0905a19a
+  - enabled: 1
+    path: Assets/Hwan/Scenes/Lv10_MapScene.unity
+    guid: 9e8677db8f56b7242a4e8b82fd9161f3
   m_configObjects: {}
