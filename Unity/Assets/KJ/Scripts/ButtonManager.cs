@@ -5,33 +5,37 @@ using UnityEngine.UI;
 
 public class ButtonManager : MonoBehaviour
 {
-    public Text textTitle;
-    //알파값
-    float alpha = 0;
-    float dir = 1;
-    public float R;
-    public float G;
-    public float B;
-  
-    void Update()
+    public Text totalTimes;
+    public Text totalDeaths;
+    public InputField ranking;
+    
+
+    private void Start()
     {
-        //알파값이 점점 늘어나게
-        alpha += 0.01f * dir;
+        
 
-        //컬러값에 세팅해준다.
-        textTitle.color = new Color(R, G, B, alpha);
+        DataManager.Name = "UNKNOWN";
 
-       
+        totalTimes.text = "Total Times: " + DataManager.Time;
 
+        totalDeaths.text = "Total Deaths : " + DataManager.count_Save;
 
-        //만약에 alpha가 1보다 같거나 커지면 alpha를 0으로
-        if (alpha >= 1)
+    }
+    void Update()
+
+    {
+        
+
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            dir *= -1;
-        }
-        if (alpha <= 0)
-        {
-            dir *= -1;
+            DataManager.Name = ranking.text;
+            print("확인완료" + DataManager.Name);
         }
     }
+
+    public void submitscore()
+    {
+        
+    }
+
 }

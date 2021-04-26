@@ -54,7 +54,7 @@ public class Player_State : MonoBehaviour
         
         if (other.transform.tag == "Enemy")
         {
-            state = PlayerState.Fly;
+            //state = PlayerState.Fly;
         
         }
     }
