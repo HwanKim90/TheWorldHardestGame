@@ -8,34 +8,31 @@ public class ButtonManager : MonoBehaviour
     public Text totalTimes;
     public Text totalDeaths;
     public InputField ranking;
-    
+    DataManager rankdata;
 
     private void Start()
     {
-        
+        rankdata = GameObject.Find("DataManager").GetComponent<DataManager>();
 
-        DataManager.Name = "UNKNOWN";
+        rankdata.Name = "UNKNOWN";
 
-        totalTimes.text = "Total Times: " + DataManager.Time;
+        totalTimes.text = "Total Times: " + rankdata.Time.ToString();
 
-        totalDeaths.text = "Total Deaths : " + DataManager.count_Save;
-
+        totalDeaths.text = "Total Deaths : " + rankdata.count_Save.ToString();
     }
     void Update()
 
     {
-        
-
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Return))//얘는 엔터키
         {
-            DataManager.Name = ranking.text;
-            print("확인완료" + DataManager.Name);
+            rankdata.Name = ranking.text;
+            print("확인완료" + rankdata.Name);
         }
     }
 
-    public void submitscore()
+    public void submitscore()//섭밋스코어에 연결된 함수
     {
-        
+        rankdata.saveInfo();
     }
 
 }

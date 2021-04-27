@@ -5,11 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class GameComplete : MonoBehaviour
 {
+    public EndGame endGame;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && CoinManager.coinCntLv10 == 3)
         {
-            print("마지막 신으로");
+            SceneManager.LoadScene("EndingScene");
+            endGame.Gameset();
+
         }
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class NextScene1 : MonoBehaviour
 {
 
-    public EndGame endGame;
+    
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,7 +15,7 @@ public class NextScene1 : MonoBehaviour
         
         if (other.transform.tag == "Player" && KJ_Coin.countCoin == 3)
         {
-            endGame.Gameset();
+            SceneManager.LoadScene("Lv10_MapScene");
         }
     }
 }
