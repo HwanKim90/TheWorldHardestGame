@@ -14,7 +14,10 @@ public class CoinRot : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
+        {
             FalseCoin();
+            SoundManager.instance.PlayEFT(SoundManager.EFT_TYPE.COIN);
+        }
     }
     void FalseCoin()
     {

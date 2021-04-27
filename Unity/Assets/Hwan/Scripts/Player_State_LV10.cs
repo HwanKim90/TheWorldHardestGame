@@ -34,54 +34,42 @@ public class Player_State_LV10 : MonoBehaviour
     private void Awake()
     {
         if (instance == null)
-        {
             instance = this;
-        }
     }
+    
     void Start()
     {
-
         state = PlayerState.Move;
-
         originMat = startZone.GetComponent<Renderer>().material;
-
-
     }
 
-
-
-    
     void Update()
     {
-
-        
         switch (state)
         {
             case PlayerState.Move:
-                isOverPower();
                 MoveInput();
-
                 break;
+               
             case PlayerState.Fly:
                 Fly();
-                //CoinManager.cmInstance.CoinReset();
                 break;
+
             case PlayerState.Respawn:
                 
                 Respawn();
                 break;
-
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (isOverPower()) return;
+        if (keyDown) return;
 
         if (other.transform.tag == "Enemy" || other.CompareTag("RotEnemy"))
         {
             state = PlayerState.Fly;
-            if (GameManager10.lv10_deathCnt >= 0 && GameManager10.lv10_deathCnt <= 16) 
+            if (GameManager10.lv10_deathCnt >= 0 && GameManager10.lv10_deathCnt <= 10) 
                 GameManager10.lv10_deathCnt++;
             print(GameManager10.lv10_deathCnt);
             moveSpeed = GameManager10.instance.MoveSpeedUp(moveSpeed);
@@ -93,7 +81,7 @@ public class Player_State_LV10 : MonoBehaviour
         }
     }
 
-    bool isOverPower()
+    void isOverPower()
     {
         
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -108,11 +96,9 @@ public class Player_State_LV10 : MonoBehaviour
             keyDown = false;
         }
 
-        return keyDown;
+        
     }
-
     
-
     void MoveInput()
     {
         print("move상태");
@@ -123,11 +109,12 @@ public class Player_State_LV10 : MonoBehaviour
         dir.Normalize();
 
         transform.position += dir * moveSpeed * Time.deltaTime;
+        isOverPower();
     }
-
 
     void Fly()
     {
+        SoundManager.instance.PlayEFT(SoundManager.EFT_TYPE.COLLISION);
         print("fly상태");
         isFly = true;
         MoveFlyAni();
@@ -135,6 +122,7 @@ public class Player_State_LV10 : MonoBehaviour
         print(isFly);
         state = PlayerState.Respawn;
     }
+
     void MoveFlyAni()
     {
         iTween.MoveTo(gameObject, iTween.Hash(
@@ -145,31 +133,26 @@ public class Player_State_LV10 : MonoBehaviour
             "easetype", "easeOutCubic"
         ));
     }
+
     void ReturnStartPointAni()
     {
         
         iTween.MoveTo(gameObject, iTween.Hash(
 
              "position", startPoint,
-
              "time", 0.7f,
              "easetype", "easeInSine"
         ));
     }
+
 
     void FlyRotateAni()
     {
         iTween.RotateTo(gameObject, iTween.Hash(
             "rotation", new Vector3(180, 180, 180) * 5,
             "time", 2f
-
-
         ));
     }
-
-    
-
-    
 
     void Respawn()
     {
@@ -179,16 +162,13 @@ public class Player_State_LV10 : MonoBehaviour
             startZone.GetComponent<Renderer>().material = mat;
             transform.position = startPoint.transform.position;
             
-
             StartCoroutine(bottomEft());
-            //StartCoroutine(LoadScene());
+
             isFly = false;
             state = PlayerState.Move;
-            
-            
         }
     }
-
+            
     IEnumerator bottomEft()
     {
 
@@ -204,14 +184,35 @@ public class Player_State_LV10 : MonoBehaviour
         startZone.GetComponent<Renderer>().material = originMat;
         yield return new WaitForSeconds(0.1f);
     }
-
-    //IEnumerator LoadScene()
-    //{
-    //    yield return new WaitForSeconds(1f);
-    //    CoinManager.coinCntLv10 = 0;
-    //    SceneManager.LoadScene("Lv10_MapScene");
-    //}
 }
+            
+            
+
+
+   
+        
+
+
+    
+
+    
+
+        
+
+
+
+    
+
+        
+
+                
+
+
+
+    
+
+
+
 
 
 

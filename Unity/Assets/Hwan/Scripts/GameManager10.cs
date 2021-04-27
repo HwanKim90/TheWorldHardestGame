@@ -28,7 +28,7 @@ public class GameManager10 : MonoBehaviour
     public float MoveSpeedUp(float moveSpeed)
     {
 
-        if (GameManager10.lv10_deathCnt > 3 && GameManager10.lv10_deathCnt < 10)
+        if (GameManager10.lv10_deathCnt >= 3 && GameManager10.lv10_deathCnt < 5)
         {
             moveSpeed = 3.5f;
             ChangeColorPlayer(speedMat1);
@@ -36,23 +36,23 @@ public class GameManager10 : MonoBehaviour
             
         }
 
-        if (GameManager10.lv10_deathCnt >= 10 && GameManager10.lv10_deathCnt < 15)
+        if (GameManager10.lv10_deathCnt >= 5 && GameManager10.lv10_deathCnt < 9)
         {
             moveSpeed = 5f;
-            LV10_P1EnemyMove.moveSpeed = 5f;
+            //LV10_P1EnemyMove.moveSpeed = 5f;
             
             ChangeColorPlayer(speedMat2);
-            CameraChangePositionAni();
-            RotCamAni();
+            
+            
         }
 
-        if (GameManager10.lv10_deathCnt == 16)
+        if (GameManager10.lv10_deathCnt == 10)
         {
             ChangeColorPlayer(speedMat3);
             moveSpeed = 6.5f;
             LV10_P1EnemyMove.moveSpeed = 3f;
-            
-
+            RotCamAni();
+            CameraChangePositionAni();
         }
 
         return moveSpeed;
@@ -66,17 +66,17 @@ public class GameManager10 : MonoBehaviour
     }
     void RotCamAni()
     {
-       
+        
         iTween.RotateTo(cam, iTween.Hash(
             "x", 90,
-            "time", 2f
-            
+            "time", 2f,
+            "delay",2f
         ));
     }
 
     void CameraChangePositionAni()
     {
-        
+        SoundManager.instance.PlayEFT(SoundManager.EFT_TYPE.CAM_MOVE);
         iTween.MoveTo(cam, iTween.Hash(
             "position", camMovePoint,
             "time", 2f,
