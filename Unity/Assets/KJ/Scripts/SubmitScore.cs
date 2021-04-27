@@ -1,4 +1,3 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +7,7 @@ public class SubmitScore : MonoBehaviour
 
     public void OnClickRetry()
     {
-        SceneManager.LoadScene("TitleScene");
+        SceneManager.LoadScene("SubmitScore");
 
     }
 }

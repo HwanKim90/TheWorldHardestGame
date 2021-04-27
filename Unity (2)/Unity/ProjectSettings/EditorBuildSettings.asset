@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/KJ/Scene/BootScene.unity
+    guid: dd1db13cdc021b64f8416f906b6dae2c
+  - enabled: 1
+    path: Assets/KJ/Scene/TitleScene.unity
+    guid: a30c55e332e250d408d762bd687b3660
+  - enabled: 1
+    path: Assets/Hwan/Scenes/Lv1_MapScene.unity
+    guid: 05754e93b9fd4384ea315d387330f098
+  - enabled: 1
+    path: Assets/KJ/Scene/nextLevel.unity
+    guid: f20ccc22441686d4bb644e6f98d3eace
+  - enabled: 1
+    path: Assets/Hwan/Scenes/Lv4_MapScene.unity
+    guid: ce02e9f9824bf1d40bb4c841278d16ca
+  - enabled: 1
+    path: Assets/KJ/Scene/EndingScene.unity
+    guid: 2d3f575dfde6e714aa05e82d0905a19a
+  - enabled: 1
+    path: Assets/KJ/Scene/SubmitScore.unity
+    guid: b322602d81e9afa4188b7678f4fc85e4
+  m_configObjects: {}
