@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class TotalScore : MonoBehaviour
 {
+    
     public Text totalTimes;
     public Text totalDeaths;
     
@@ -13,10 +14,9 @@ public class TotalScore : MonoBehaviour
 
 
         
+        totalTimes.text = "Time : " + DataManager.Time;
 
-        totalTimes.text = "???? " + DataManager.Time;
-
-        totalDeaths.text = "Total Deaths : " + DataManager.count_Save;
+        totalDeaths.text = "Deaths : " + DataManager.count_Save;
 
     }
     private void Update()
