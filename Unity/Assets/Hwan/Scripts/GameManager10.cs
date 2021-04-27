@@ -69,8 +69,8 @@ public class GameManager10 : MonoBehaviour
         
         iTween.RotateTo(cam, iTween.Hash(
             "x", 90,
-            "time", 2f,
-            "delay",2f
+            "time", 2f
+            
         ));
     }
 
