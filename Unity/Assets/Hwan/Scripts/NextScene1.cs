@@ -15,7 +15,7 @@ public class NextScene1 : MonoBehaviour
         
         if (other.transform.tag == "Player" && KJ_Coin.countCoin == 3)
         {
-            SceneManager.LoadScene("Lv10_MapScene");
+            SceneManager.LoadScene("ImpossibleScene");
         }
     }
 }

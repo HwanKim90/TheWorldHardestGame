@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/KJ/Scene/BootScene.unity
+    guid: dd1db13cdc021b64f8416f906b6dae2c
+  - enabled: 1
     path: Assets/KJ/Scene/TitleScene.unity
     guid: a30c55e332e250d408d762bd687b3660
   - enabled: 1
@@ -17,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Hwan/Scenes/Lv4_MapScene.unity
     guid: ce02e9f9824bf1d40bb4c841278d16ca
+  - enabled: 1
+    path: Assets/KJ/Scene/ImpossibleScene.unity
+    guid: bec673f96c235ff4eb5e2d4acaeea65d
   - enabled: 1
     path: Assets/Hwan/Scenes/Lv10_MapScene.unity
     guid: 9e8677db8f56b7242a4e8b82fd9161f3

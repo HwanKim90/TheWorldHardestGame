@@ -49,7 +49,7 @@ public class GameManager10 : MonoBehaviour
         if (GameManager10.lv10_deathCnt == 10)
         {
             ChangeColorPlayer(speedMat3);
-            moveSpeed = 6.5f;
+            moveSpeed = 6f;
             LV10_P1EnemyMove.moveSpeed = 3f;
             RotCamAni();
             CameraChangePositionAni();

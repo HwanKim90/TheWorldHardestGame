@@ -13,7 +13,7 @@ public class TitleManager : MonoBehaviour
 
         BGM = GameObject.Find("BGMManager").GetComponent<AudioSource>();
         UI = GameObject.Find("UIManager").GetComponent<UIManager>();
-
+      
         BGM.Stop();
         //UI<- Title매니저 씬에 있는애 .UI <- UIManager에 있는애 그래서 찾아와야함. 그렇게 해야지 그 뒤에 Setactive가 활성화 됨
         UI.UI.SetActive(false);
