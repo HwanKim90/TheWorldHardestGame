@@ -25,13 +25,13 @@ public class DeathScript : MonoBehaviour
 
         if (SceneManager.GetActiveScene().name == "Lv4_MapScene")
         {
-            count = DC.count_Save;//µ¥½º¼ö¸¦ °è½ÂÇÏ´Â ÁßÀÔ´Ï´Ù
+            count = DC.count_Save;//ë°ìŠ¤ ì €ì¥
             ui.DeathUI.text = "Deaths: " + count.ToString();
         }
 
         if (SceneManager.GetActiveScene().name == "Lv10_MapScene")
         {
-            count = DC.count_Save;//µ¥½º¼ö¸¦ °è½ÂÇÏ´Â ÁßÀÔ´Ï´Ù
+            count = DC.count_Save;//ë°ìŠ¤ ì €ì¥
             ui.DeathUI.text = "Deaths: " + count.ToString();
         }
     }
